@@ -1,0 +1,143 @@
+Starting Dynare (version 6.2).
+Calling Dynare with arguments: none
+Starting preprocessing of the model file ... 
+WARNING: in the 'steady_state_model' block, variable 'nu' is not assigned a value 
+Found 12 equation(s). 
+Evaluating expressions... 
+Computing static model derivatives (order 1). 
+Normalizing the static model... 
+Finding the optimal block decomposition of the static model... 
+7 block(s) found: 
+  5 recursive block(s) and 2 simultaneous block(s). 
+  the largest simultaneous block has 4 equation(s) 
+                                 and 4 feedback variable(s). 
+Computing dynamic model derivatives (order 1). 
+Normalizing the dynamic model... 
+Finding the optimal block decomposition of the dynamic model... 
+7 block(s) found: 
+  5 recursive block(s) and 2 simultaneous block(s). 
+  the largest simultaneous block has 4 equation(s) 
+                                 and 1 feedback variable(s). 
+Preprocessing completed. 
+Preprocessing time: 0h00m00s.
+
+
+Residuals of the static equations:
+Equation number  1: FOC Wages, eq. (7)                           :       0.000000
+Equation number  2: Euler equation eq. (8)                       :       0.000000
+Equation number  3: Definition nominal interest rate), p. 22 top :       0.000000
+Equation number  4: Production function eq. (12)                 :       0.000000
+Equation number  5: FOC wages firm, eq. (14)                     :       0.000000
+Equation number  6: Definition Real interest rate, eq. 22        :       0.000000
+Equation number  7: Monetary Policy Rule, p. 26 bottom/eq. (22)  :       0.000000
+Equation number  8: Market Clearing, eq. (15)                    :       0.000000
+Equation number  9: Technology Shock, p.22                       :       0.000000
+Equation number 10: Preference Shock, p.21                       :       0.000000
+Equation number 11: Monetary policy shock, (23)                  :       0.000000
+Equation number 12: Money growth (derived from eq. (11))         :       0.000000
+
+
+
+STEADY-STATE RESULTS:
+
+C            		 0.964679
+W_real       		 0.759044
+Pi           		 1
+A            		 1
+N            		 0.953184
+R            		 1.0101
+realinterest 		 1.0101
+Y            		 0.964679
+nu           		 0
+m_growth_ann 		 0
+Q            		 0.99
+Z            		 1
+
+EIGENVALUES:
+         Modulus             Real        Imaginary
+               0                0                0
+               0                0                0
+             0.5              0.5                0
+             0.5              0.5                0
+             0.9              0.9                0
+             1.5              1.5                0
+       7.526e+15        7.526e+15                0
+             Inf             -Inf                0
+
+There are 3 eigenvalue(s) larger than 1 in modulus for 3 forward-looking variable(s)
+The rank condition is verified.
+
+
+MODEL SUMMARY
+
+  Number of variables:         12
+  Number of stochastic shocks: 3
+  Number of state variables:   5
+  Number of jumpers:           3
+  Number of static variables:  6
+
+
+MATRIX OF COVARIANCE OF EXOGENOUS SHOCKS
+Variables       eps_a     eps_z    eps_nu
+eps_a        1.000000  0.000000  0.000000
+eps_z        0.000000  1.000000  0.000000
+eps_nu       0.000000  0.000000  1.000000
+
+POLICY AND TRANSITION FUNCTIONS
+                                   Y               C              Pi               R    realinterest    m_growth_ann
+Constant                    0.964679        0.964679        1.000000        1.010101        1.010101               0
+A(-1)                       0.868211        0.868211       -0.150000       -0.227273       -0.090909        6.393000
+R(-1)                              0               0               0               0               0       14.929200
+nu(-1)                             0               0       -0.500000       -0.252525               0        1.770000
+C(-1)                              0               0               0               0               0       -4.146459
+Z(-1)                              0               0        0.250000        0.378788        0.252525       -4.655000
+eps_a                       0.964679        0.964679       -0.166667       -0.252525       -0.101010        7.103333
+eps_z                              0               0        0.500000        0.757576        0.505051       -9.310000
+eps_nu                             0               0       -1.000000       -0.505051               0        3.540000
+
+
+THEORETICAL MOMENTS
+VARIABLE             MEAN  STD. DEV.   VARIANCE
+Y                  0.9647     2.2131     4.8979
+C                  0.9647     2.2131     4.8979
+Pi                 1.0000     1.3464     1.8129
+R                  1.0101     1.2004     1.4410
+realinterest       1.0101     0.6275     0.3938
+m_growth_ann       0.0000    16.2200   263.0872
+
+
+
+VARIANCE DECOMPOSITION (in percent)
+                 eps_a   eps_z  eps_nu
+Y               100.00    0.00    0.00
+C               100.00    0.00    0.00
+Pi                8.06   18.39   73.55
+R                23.29   53.11   23.60
+realinterest     13.64   86.36    0.00
+m_growth_ann     22.97   55.39   21.64
+
+
+
+MATRIX OF CORRELATIONS
+Variables                  Y             C            Pi             R  realinterest  m_growth_ann
+Y                     1.0000        1.0000       -0.2840       -0.4826       -0.3693        0.0156
+C                     1.0000        1.0000       -0.2840       -0.4826       -0.3693        0.0156
+Pi                   -0.2840       -0.2840        1.0000        0.8662        0.5034       -0.1020
+R                    -0.4826       -0.4826        0.8662        1.0000        0.8554       -0.1892
+realinterest         -0.3693       -0.3693        0.5034        0.8554        1.0000       -0.2476
+m_growth_ann          0.0156        0.0156       -0.1020       -0.1892       -0.2476        1.0000
+
+
+
+COEFFICIENTS OF AUTOCORRELATION
+Order                 1        2        3        4        5
+Y                0.9000   0.8100   0.7290   0.6561   0.5905
+C                0.9000   0.8100   0.7290   0.6561   0.5905
+Pi               0.5323   0.2952   0.1737   0.1104   0.0763
+R                0.5932   0.3804   0.2657   0.2008   0.1615
+realinterest     0.5545   0.3264   0.2074   0.1434   0.1075
+m_growth_ann    -0.1196  -0.0610  -0.0316  -0.0168  -0.0093
+[Warning: Exported image displays axes toolbar. To remove axes toolbar from image, export again.] 
+Total computing time : 0h00m12s
+Note: 1 warning(s) encountered in the preprocessor
+Note: warning(s) encountered in MATLAB/Octave code
